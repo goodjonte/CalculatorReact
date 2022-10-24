@@ -47,20 +47,7 @@ function App() {
       />
       =
       <input type='number' defaultValue={answer} />
-      <div>
-        <button className='AppButton' onClick={() => Calculate("+")}>
-        +
-        </button>
-        <button className='AppButton' onClick={() => Calculate("-")}>
-        -
-        </button>
-        <button className='AppButton' onClick={() => Calculate("*")}>
-        X
-        </button>
-        <button className='AppButton' onClick={() => Calculate("/")}>
-        /
-        </button>
-      </div>
+      
     </div>
   );
 }
