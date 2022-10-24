@@ -15,7 +15,7 @@ function App() {
           setAnswer(first - second);
           break;
         case "+":
-          setAnswer(first + second);
+          setAnswer(parseInt(first) + parseInt(second));
           break;
         case "*":
           setAnswer(first * second);
