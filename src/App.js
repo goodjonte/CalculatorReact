@@ -1,14 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
-var name = "jonte";
+
 function App() {
+const[answer, setAnswer] =  useState("");
+const[first, setFirst] = useState(10);
+const[second, setSecond] = useState(22);  
+
+
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          {name}
+          
         </p>
         <a
           className="App-link"
