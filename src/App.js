@@ -4,10 +4,33 @@ import { useState } from 'react';
 
 
 function App() {
-const[answer, setAnswer] =  useState("");
-const[first, setFirst] = useState(10);
-const[second, setSecond] = useState(22);  
+  const[answer, setAnswer] =  useState("");
+  const[first, setFirst] = useState(10);
+  const[second, setSecond] = useState(22);  
 
+  const Calculate = (value) => {
+    console.log("value", value);
+    if (value !== ""){
+      switch  (value) { 
+        case "-":
+          setAnswer(first - second);
+          break;
+        case "+":
+          setAnswer(first + second);
+          break;
+        case "*":
+          setAnswer(first * second);
+          break;
+        case "/":
+          setAnswer(first / second);
+          break;
+          
+        default:
+          setAnswer("error");
+                  break;
+      }
+    }
+  }
 
 
   return (
