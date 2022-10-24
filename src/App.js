@@ -1,12 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
 
 function App() {
   const[answer, setAnswer] =  useState("");
-  const[first, setFirst] = useState(10);
-  const[second, setSecond] = useState(22);  
+  const[first, setFirst] = useState(0);
+  const[second, setSecond] = useState(0);  
 
   const Calculate = (value) => {
     console.log("value", value);
@@ -34,21 +33,34 @@ function App() {
 
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>Simple Calculator</h1>
+      <input
+      type='number'
+      value={Number(first)}
+      onChange={(event) => setFirst(event.target.value)}
+      />
+      <input
+      type='number'
+      value={Number(second)}
+      onChange={(event) => setSecond(event.target.value)}
+      />
+      =
+      <input type='number' defaultValue={answer} />
+      <div>
+        <button className='AppButton' onClick={() => Calculate("+")}>
+        +
+        </button>
+        <button className='AppButton' onClick={() => Calculate("-")}>
+        -
+        </button>
+        <button className='AppButton' onClick={() => Calculate("*")}>
+        X
+        </button>
+        <button className='AppButton' onClick={() => Calculate("/")}>
+        /
+        </button>
+      </div>
     </div>
   );
 }
