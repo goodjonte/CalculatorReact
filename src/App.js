@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from 'react';
+import CalcButtons from './Components/calcbuttons'; 
 
 
 function App() {
@@ -47,7 +48,7 @@ function App() {
       />
       =
       <input type='number' defaultValue={answer} />
-      
+        <CalcButtons />
     </div>
   );
 }
